@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SFTQuickConnectWindowController">
+            <connections>
+                <outlet property="address" destination="UV5-ng-74s" id="Nao-JX-Ca5"/>
+                <outlet property="window" destination="ndu-ND-WKT" id="RvB-91-HD2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ndu-ND-WKT" userLabel="Quick Connect Sheet">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="163" y="199" width="479" height="88"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <view key="contentView" id="i6W-e4-DYL">
+                <rect key="frame" x="0.0" y="0.0" width="479" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9MC-Vq-ZD9">
+                        <rect key="frame" x="18" y="51" width="200" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter the address to connect to:" id="sR6-fc-fMT">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9zD-vy-G89">
+                        <rect key="frame" x="373" y="13" width="92" height="32"/>
+                        <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LSp-Cv-euy">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="confirmConnection:" target="-2" id="nif-Kp-qYi"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-1i-obz">
+                        <rect key="frame" x="282" y="13" width="92" height="32"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XE3-Io-5pM">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelConnection:" target="-2" id="MeB-2K-jkB"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UV5-ng-74s">
+                        <rect key="frame" x="224" y="49" width="235" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="wkJ-QQ-8ug">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="CyY-Ge-2Hb"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9MC-Vq-ZD9" firstAttribute="leading" secondItem="i6W-e4-DYL" secondAttribute="leading" constant="20" symbolic="YES" id="1qN-yy-Pbb"/>
+                    <constraint firstItem="9MC-Vq-ZD9" firstAttribute="centerY" secondItem="UV5-ng-74s" secondAttribute="centerY" id="Evx-Ps-iCJ"/>
+                    <constraint firstItem="UV5-ng-74s" firstAttribute="trailing" secondItem="9zD-vy-G89" secondAttribute="trailing" id="Hh6-ZI-Lh5"/>
+                    <constraint firstAttribute="trailing" secondItem="UV5-ng-74s" secondAttribute="trailing" constant="20" symbolic="YES" id="VAy-XA-FIO"/>
+                    <constraint firstItem="BD6-1i-obz" firstAttribute="width" secondItem="9zD-vy-G89" secondAttribute="width" id="dNl-bc-R6y"/>
+                    <constraint firstItem="UV5-ng-74s" firstAttribute="leading" secondItem="9MC-Vq-ZD9" secondAttribute="trailing" constant="8" symbolic="YES" id="mbB-5D-16U"/>
+                    <constraint firstItem="9MC-Vq-ZD9" firstAttribute="top" secondItem="i6W-e4-DYL" secondAttribute="top" constant="20" symbolic="YES" id="nFf-tU-BZj"/>
+                    <constraint firstItem="BD6-1i-obz" firstAttribute="baseline" secondItem="9zD-vy-G89" secondAttribute="baseline" id="oHF-fR-qSj"/>
+                    <constraint firstItem="9zD-vy-G89" firstAttribute="leading" secondItem="BD6-1i-obz" secondAttribute="trailing" constant="11" id="r5z-Uy-8n7"/>
+                    <constraint firstItem="BD6-1i-obz" firstAttribute="top" secondItem="UV5-ng-74s" secondAttribute="bottom" constant="8" symbolic="YES" id="wM0-my-jgO"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="lCS-e7-P62"/>
+            </connections>
+            <point key="canvasLocation" x="-42.5" y="687"/>
+        </window>
+    </objects>
+</document>

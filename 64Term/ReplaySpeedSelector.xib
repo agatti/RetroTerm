@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SFTReplaySpeedSelectorViewController">
+            <connections>
+                <outlet property="speedComboBox" destination="D1m-ra-pu8" id="Q9d-kU-1Ro"/>
+                <outlet property="view" destination="W77-gs-q4p" id="J0q-w5-OUD"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="W77-gs-q4p" userLabel="Replay Speed View">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-ZO-lba">
+                    <rect key="frame" x="18" y="23" width="135" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Replay speed (in bps)" id="P4k-uf-yhs">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D1m-ra-pu8" userLabel="Replay Speed">
+                    <rect key="frame" x="220" y="16" width="127" height="26"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" numberOfVisibleItems="5" id="JKZ-B6-Ddb">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>300 bps</string>
+                            <string>1200 bps</string>
+                            <string>2400 bps</string>
+                            <string>4800 bps</string>
+                            <string>9600 bps</string>
+                            <string>14400 bps</string>
+                            <string>19200 bps</string>
+                            <string>28800 bps</string>
+                            <string>33600 bps</string>
+                            <string>57600 bps</string>
+                            <string>Uncapped</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <outlet property="delegate" destination="-2" id="32y-G9-ffY"/>
+                    </connections>
+                </comboBox>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LqT-ZO-lba" secondAttribute="bottom" constant="23" id="0Je-c0-RhK"/>
+                <constraint firstItem="D1m-ra-pu8" firstAttribute="top" secondItem="W77-gs-q4p" secondAttribute="top" constant="20" id="AIn-5d-jTB"/>
+                <constraint firstItem="LqT-ZO-lba" firstAttribute="leading" secondItem="W77-gs-q4p" secondAttribute="leading" constant="20" id="AKo-Ws-Qu2"/>
+                <constraint firstAttribute="trailing" secondItem="D1m-ra-pu8" secondAttribute="trailing" constant="20" id="BVY-sq-LhW"/>
+                <constraint firstItem="D1m-ra-pu8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LqT-ZO-lba" secondAttribute="trailing" constant="69" id="EP0-Ea-AeI"/>
+                <constraint firstItem="D1m-ra-pu8" firstAttribute="leading" secondItem="LqT-ZO-lba" secondAttribute="trailing" constant="69" id="JcG-FY-GkI"/>
+                <constraint firstItem="LqT-ZO-lba" firstAttribute="top" secondItem="W77-gs-q4p" secondAttribute="top" constant="20" id="pmv-fe-7oZ"/>
+                <constraint firstAttribute="bottom" secondItem="D1m-ra-pu8" secondAttribute="bottom" constant="20" id="tOR-Iy-v15"/>
+            </constraints>
+            <point key="canvasLocation" x="12" y="828"/>
+        </customView>
+    </objects>
+</document>
