@@ -1,9 +1,9 @@
-SixtyFourTerm
+RetroTerm
 ===
 
 This was an attempt at writing a client for Commodore 64 Telnet-based BBSes, running on macOS.
 
-Even though it does work somehow, it is still pretty rough around the edges and I sort of ran out of steam whilst developing this.
+Even though it does work somehow, it is still pretty rough around the edges and it is (very) slowly being developed into something slightly more generic than a simple C64-only terminal emulator.
 
 That said, this can be easily taken and repurposed for other 8-bit machine styles (say, Apple 2, Atari XE, etc.), to obtain the appropriate retro feeling.  The main novelty of this piece of software is that text composition and rendering is done using Metal shaders, and it is supposed to run at 60fps at all times.  Nothing terribly complex but pretty nice nonetheless.
 
