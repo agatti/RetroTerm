@@ -365,11 +365,24 @@ static const NSTimeInterval kCursorStateChangeInterval = 0.5f;
   [self setEnabledForMenuItemTag:SFTUserInterfaceTagMenuDebug enabled:NO];
 }
 
-// @TODO: Keep aspect ratio when resizing.
+- (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)frameSize {
+  NSSize current = self.window.frame.size;
+  NSSize new = NSMakeSize(frameSize.width, frameSize.height);
 
-//- (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)frameSize {
-//    return self.window.frame.size;
-//}
+  CGFloat ratioX = current.width / frameSize.width;
+  CGFloat ratioY = current.height / frameSize.height;
+
+  if (ratioY > ratioX) {
+    new.width = ((new.height * current.width) / current.height);
+  } else {
+    new.height = ((new.width * current.height) / current.width);
+  }
+
+  new.width = MAX(self.terminalContext.width * 8, new.width);
+  new.height = MAX(self.terminalContext.height * 8, new.height);
+
+  return new;
+}
 
 - (nullable NSImage *)contentsImage {
   return self.contentsView.screenshot;
