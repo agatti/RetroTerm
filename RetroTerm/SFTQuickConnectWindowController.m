@@ -26,6 +26,8 @@
 static NSString *SFTAddressToValidURLTransformerName =
     @"SFTAddressToValidURLTransformer";
 
+static NSCharacterSet *kASCIIDecimalCharacterSet;
+
 static NSURL *_Nullable ConvertAddressStringToURL(NSString *_Nonnull address);
 
 @interface SFTAddressToValidURLTransformer : NSValueTransformer
@@ -68,6 +70,9 @@ static NSURL *_Nullable ConvertAddressStringToURL(NSString *_Nonnull address);
 + (void)initialize {
   [NSValueTransformer setValueTransformer:[SFTAddressToValidURLTransformer new]
                                   forName:SFTAddressToValidURLTransformerName];
+
+  kASCIIDecimalCharacterSet =
+      [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
 }
 
 - (IBAction)cancelConnection:(id)sender {
@@ -82,33 +87,71 @@ static NSURL *_Nullable ConvertAddressStringToURL(NSString *_Nonnull address);
   [self.window.sheetParent endSheet:self.window returnCode:response];
 }
 
-- (BOOL)control:(NSControl *)control
-    textShouldEndEditing:(NSText *)fieldEditor {
-  return YES;
-}
-
-- (BOOL)control:(NSControl *)control
-    textShouldBeginEditing:(NSText *)fieldEditor {
-  return YES;
-}
-
-- (void)controlTextDidEndEditing:(NSNotification *)notification {
+- (void)controlTextDidChange:(NSNotification *)obj {
   self.url = ConvertAddressStringToURL(self.address.stringValue);
 }
 
 @end
 
 NSURL *_Nullable ConvertAddressStringToURL(NSString *_Nonnull address) {
-  NSURL *url = [NSURL URLWithString:address.lowercaseString];
+  NSString *trimmed = [address
+      stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet];
+  if (trimmed.length == 0) {
+    return nil;
+  }
+
+  NSURL *url = [NSURL URLWithString:trimmed.lowercaseString];
   if (url == nil) {
     return nil;
   }
 
-  if ((url.scheme != nil) && ![url.scheme isEqualToString:SFTDefaultScheme]) {
-    return nil;
+  if (url.host == nil) {
+    NSArray<NSString *> *hostAndPort =
+        [trimmed componentsSeparatedByString:@":"];
+    if (hostAndPort.count > 2) {
+      return nil;
+    }
+
+    NSUInteger port = SFTDefaultPort;
+
+    if (hostAndPort.count == 2) {
+      if (hostAndPort[1].length == 0) {
+        return nil;
+      }
+
+      for (NSUInteger index = 0; index < hostAndPort[1].length; index++) {
+        if (![kASCIIDecimalCharacterSet
+                characterIsMember:[hostAndPort[1] characterAtIndex:index]]) {
+          return nil;
+        }
+      }
+
+      NSInteger value = hostAndPort[1].integerValue;
+      if ((value < 0) || (value > 65535)) {
+        return nil;
+      }
+
+      port = (NSUInteger)value;
+    }
+
+    if (hostAndPort[0].length == 0) {
+      return nil;
+    }
+
+    for (NSUInteger index = 0; index < hostAndPort[0].length; index++) {
+      if (![NSCharacterSet.URLHostAllowedCharacterSet
+              characterIsMember:[hostAndPort[0] characterAtIndex:index]]) {
+        return nil;
+      }
+    }
+
+    return
+        [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@:%lu/",
+                                                        SFTDefaultScheme,
+                                                        hostAndPort[0], port]];
   }
 
-  if (url.host == nil) {
+  if ((url.scheme != nil) && ![url.scheme isEqualToString:SFTDefaultScheme]) {
     return nil;
   }
 
