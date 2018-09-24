@@ -67,6 +67,7 @@ Gw
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
+                            <action selector="addressTextAction:" target="-2" id="CNk-O1-JD7"/>
                             <outlet property="delegate" destination="-2" id="CyY-Ge-2Hb"/>
                         </connections>
                     </textField>

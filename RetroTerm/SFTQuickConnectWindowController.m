@@ -83,6 +83,12 @@ static NSURL *_Nullable ConvertAddressStringToURL(NSString *_Nonnull address);
   [self terminateWithReturnCode:NSModalResponseOK];
 }
 
+- (IBAction)addressTextAction:(id)sender {
+  if (self.url != nil) {
+    [self confirmConnection:sender];
+  }
+}
+
 - (void)terminateWithReturnCode:(NSModalResponse)response {
   [self.window.sheetParent endSheet:self.window returnCode:response];
 }
