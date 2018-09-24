@@ -23,9 +23,9 @@
 		6816B59A1F951704008E6952 /* AddressBook.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6816B5981F951704008E6952 /* AddressBook.xib */; };
 		6816B59C1F951726008E6952 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6816B59B1F951726008E6952 /* MainMenu.xib */; };
 		6816B5C11F95186B008E6952 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6816B5C01F951861008E6952 /* CoreData.framework */; };
+		6821120221595234002473A5 /* SFTAddressBookEntry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821120121595234002473A5 /* SFTAddressBookEntry+CoreDataProperties.m */; };
 		682362151F978546003E3ECA /* SFTAddressBookEntry+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 682362121F978546003E3ECA /* SFTAddressBookEntry+CoreDataClass.m */; };
 		682362191F978568003E3ECA /* SFTDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682362181F978568003E3ECA /* SFTDataController.m */; };
-		6823621C1F978F1F003E3ECA /* SFTAddressBookEntry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823621B1F978F1F003E3ECA /* SFTAddressBookEntry+CoreDataProperties.m */; };
 		682362201F97B27F003E3ECA /* NSMutableData+Append.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823621F1F97B27F003E3ECA /* NSMutableData+Append.m */; };
 		682362231F97B757003E3ECA /* NSMutableData+Dequeue.m in Sources */ = {isa = PBXBuildFile; fileRef = 682362221F97B757003E3ECA /* NSMutableData+Dequeue.m */; };
 		683365F21F97D38500FB1AF4 /* SFTDataToImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 683365F11F97D38500FB1AF4 /* SFTDataToImageTransformer.m */; };
@@ -84,12 +84,12 @@
 		6816B5981F951704008E6952 /* AddressBook.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressBook.xib; sourceTree = "<group>"; };
 		6816B59B1F951726008E6952 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6816B5C01F951861008E6952 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6821120021595234002473A5 /* SFTAddressBookEntry+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFTAddressBookEntry+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6821120121595234002473A5 /* SFTAddressBookEntry+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SFTAddressBookEntry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		682362111F978546003E3ECA /* SFTAddressBookEntry+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFTAddressBookEntry+CoreDataClass.h"; sourceTree = "<group>"; };
 		682362121F978546003E3ECA /* SFTAddressBookEntry+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SFTAddressBookEntry+CoreDataClass.m"; sourceTree = "<group>"; };
 		682362171F978568003E3ECA /* SFTDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTDataController.h; sourceTree = "<group>"; };
 		682362181F978568003E3ECA /* SFTDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTDataController.m; sourceTree = "<group>"; };
-		6823621A1F978F1F003E3ECA /* SFTAddressBookEntry+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFTAddressBookEntry+CoreDataProperties.h"; sourceTree = "<group>"; };
-		6823621B1F978F1F003E3ECA /* SFTAddressBookEntry+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SFTAddressBookEntry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		6823621E1F97B23D003E3ECA /* NSMutableData+Append.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+Append.h"; sourceTree = "<group>"; };
 		6823621F1F97B27F003E3ECA /* NSMutableData+Append.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+Append.m"; sourceTree = "<group>"; };
 		682362211F97B757003E3ECA /* NSMutableData+Dequeue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+Dequeue.h"; sourceTree = "<group>"; };
@@ -317,8 +317,8 @@
 		688CD7E31F9527E7004CF943 /* Generated Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6823621A1F978F1F003E3ECA /* SFTAddressBookEntry+CoreDataProperties.h */,
-				6823621B1F978F1F003E3ECA /* SFTAddressBookEntry+CoreDataProperties.m */,
+				6821120021595234002473A5 /* SFTAddressBookEntry+CoreDataProperties.h */,
+				6821120121595234002473A5 /* SFTAddressBookEntry+CoreDataProperties.m */,
 				682362111F978546003E3ECA /* SFTAddressBookEntry+CoreDataClass.h */,
 				682362121F978546003E3ECA /* SFTAddressBookEntry+CoreDataClass.m */,
 			);
@@ -433,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6821120221595234002473A5 /* SFTAddressBookEntry+CoreDataProperties.m in Sources */,
 				68D267161F89D713004AD82E /* SFTCommon.m in Sources */,
 				684699CC1F9E0C1700AB3948 /* SFTNetworkIOProcessor.m in Sources */,
 				68025B631F89327D00730160 /* SFTDocument.m in Sources */,
@@ -462,7 +463,6 @@
 				6845D3D51F98E6BB00CB8FD1 /* SFTDataFlowLogger.m in Sources */,
 				683965D81F9AEC340011A040 /* SFTAddressBookSerialiser.m in Sources */,
 				682362151F978546003E3ECA /* SFTAddressBookEntry+CoreDataClass.m in Sources */,
-				6823621C1F978F1F003E3ECA /* SFTAddressBookEntry+CoreDataProperties.m in Sources */,
 				6845D3CA1F9878E200CB8FD1 /* SFTKeyConverter.m in Sources */,
 				688009D51F950D99002A74F8 /* SFTAddressBookController.m in Sources */,
 				680DB7941F9DE8FF007DB4DD /* SFTDataFlowInspectorWindowController.m in Sources */,

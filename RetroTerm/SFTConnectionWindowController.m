@@ -141,7 +141,7 @@ static const NSTimeInterval kCursorStateChangeInterval = 0.5f;
 - (void)initialiseNetwork {
   SFTAddressBookEntry *entry = [self.document entry];
   NSURL *potentialAddress = entry != nil
-                                ? [NSURL URLWithString:entry.address]
+                                ? entry.address
                                 : ((SFTDocument *)self.document).address;
   NSURL *address = potentialAddress;
   if ((entry != nil) && (potentialAddress.host == nil) &&
