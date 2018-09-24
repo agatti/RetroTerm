@@ -28,7 +28,7 @@
   self = [super init];
   if (self != nil) {
     _persistentContainer =
-        [[NSPersistentContainer alloc] initWithName:@"64Term"];
+        [[NSPersistentContainer alloc] initWithName:@"RetroTerm"];
     [_persistentContainer
         loadPersistentStoresWithCompletionHandler:^(
             NSPersistentStoreDescription *description, NSError *error) {

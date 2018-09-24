@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		68025B6B1F8935BE00730160 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68025B681F8935BE00730160 /* Metal.framework */; };
 		68025B6E1F8937B900730160 /* Terminal.metal in Sources */ = {isa = PBXBuildFile; fileRef = 68025B6D1F8937B900730160 /* Terminal.metal */; };
 		68025B751F8957B500730160 /* SFTConnectionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68025B741F8957B500730160 /* SFTConnectionWindowController.m */; };
-		680368B41F95284D00889CE9 /* 64Term.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 680368B01F95284D00889CE9 /* 64Term.xcdatamodeld */; };
+		680368B41F95284D00889CE9 /* RetroTerm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 680368B01F95284D00889CE9 /* RetroTerm.xcdatamodeld */; };
 		680368B51F95284D00889CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 680368B21F95284D00889CE9 /* Assets.xcassets */; };
 		680368BF1F95350300889CE9 /* SFTDeadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 680368BE1F95350300889CE9 /* SFTDeadButton.m */; };
 		680DB7941F9DE8FF007DB4DD /* SFTDataFlowInspectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680DB7921F9DE8FF007DB4DD /* SFTDataFlowInspectorWindowController.m */; };
@@ -60,18 +60,8 @@
 		68D267181F89D81D004AD82E /* SFTSharedResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D267171F89D81D004AD82E /* SFTSharedResources.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		68E550F21FF92642008C7AF6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68025B051F8931CA00730160 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68025B0C1F8931CA00730160;
-			remoteInfo = 64Term;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		68025B0D1F8931CA00730160 /* 64Term.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 64Term.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68025B0D1F8931CA00730160 /* RetroTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68025B101F8931CA00730160 /* SFTApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTApplicationDelegate.h; sourceTree = "<group>"; };
 		68025B111F8931CA00730160 /* SFTApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTApplicationDelegate.m; sourceTree = "<group>"; };
 		68025B191F8931CA00730160 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,7 +74,7 @@
 		68025B731F8957B500730160 /* SFTConnectionWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTConnectionWindowController.h; sourceTree = "<group>"; };
 		68025B741F8957B500730160 /* SFTConnectionWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTConnectionWindowController.m; sourceTree = "<group>"; };
 		680368AE1F95284D00889CE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		680368AF1F95284D00889CE9 /* 64Term.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = 64Term.entitlements; sourceTree = "<group>"; };
+		680368AF1F95284D00889CE9 /* RetroTerm.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = RetroTerm.entitlements; sourceTree = "<group>"; };
 		680368B11F95284D00889CE9 /* v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.xcdatamodel; sourceTree = "<group>"; };
 		680368B21F95284D00889CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		680368BC1F9534D000889CE9 /* SFTDeadButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTDeadButton.h; sourceTree = "<group>"; };
@@ -157,8 +147,6 @@
 		68D267141F89D5C4004AD82E /* SFTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTCommon.h; sourceTree = "<group>"; };
 		68D267151F89D713004AD82E /* SFTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTCommon.m; sourceTree = "<group>"; };
 		68D267171F89D81D004AD82E /* SFTSharedResources.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTSharedResources.m; sourceTree = "<group>"; };
-		68E550ED1FF92642008C7AF6 /* 64TermTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 64TermTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68E550F11FF92642008C7AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,21 +162,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68E550EA1FF92642008C7AF6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		68025B041F8931CA00730160 = {
 			isa = PBXGroup;
 			children = (
-				68025B0F1F8931CA00730160 /* 64Term */,
-				68E550EE1FF92642008C7AF6 /* 64TermTests */,
+				68025B0F1F8931CA00730160 /* RetroTerm */,
 				68025B0E1F8931CA00730160 /* Products */,
 				68025B661F8935BD00730160 /* Frameworks */,
 			);
@@ -197,13 +177,12 @@
 		68025B0E1F8931CA00730160 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68025B0D1F8931CA00730160 /* 64Term.app */,
-				68E550ED1FF92642008C7AF6 /* 64TermTests.xctest */,
+				68025B0D1F8931CA00730160 /* RetroTerm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		68025B0F1F8931CA00730160 /* 64Term */ = {
+		68025B0F1F8931CA00730160 /* RetroTerm */ = {
 			isa = PBXGroup;
 			children = (
 				6842D1051FF275A700929F96 /* Transformers */,
@@ -218,7 +197,7 @@
 				688CD7E21F95277C004CF943 /* Shaders */,
 				68025B191F8931CA00730160 /* main.m */,
 			);
-			path = 64Term;
+			path = RetroTerm;
 			sourceTree = "<group>";
 		};
 		68025B661F8935BD00730160 /* Frameworks */ = {
@@ -374,28 +353,20 @@
 				68378BF41FA0587A0070E0E6 /* charset_lower.png */,
 				68378BF51FA0587A0070E0E6 /* charset_upper.png */,
 				68378BF21FA0584B0070E0E6 /* charset.png */,
-				680368AF1F95284D00889CE9 /* 64Term.entitlements */,
-				680368B01F95284D00889CE9 /* 64Term.xcdatamodeld */,
+				680368AF1F95284D00889CE9 /* RetroTerm.entitlements */,
+				680368B01F95284D00889CE9 /* RetroTerm.xcdatamodeld */,
 				680368B21F95284D00889CE9 /* Assets.xcassets */,
 				680368AE1F95284D00889CE9 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		68E550EE1FF92642008C7AF6 /* 64TermTests */ = {
-			isa = PBXGroup;
-			children = (
-				68E550F11FF92642008C7AF6 /* Info.plist */,
-			);
-			path = 64TermTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		68025B0C1F8931CA00730160 /* 64Term */ = {
+		68025B0C1F8931CA00730160 /* RetroTerm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68025B1E1F8931CA00730160 /* Build configuration list for PBXNativeTarget "64Term" */;
+			buildConfigurationList = 68025B1E1F8931CA00730160 /* Build configuration list for PBXNativeTarget "RetroTerm" */;
 			buildPhases = (
 				68025B091F8931CA00730160 /* Sources */,
 				68025B0A1F8931CA00730160 /* Frameworks */,
@@ -405,28 +376,10 @@
 			);
 			dependencies = (
 			);
-			name = 64Term;
+			name = RetroTerm;
 			productName = sixtyfourterm;
-			productReference = 68025B0D1F8931CA00730160 /* 64Term.app */;
+			productReference = 68025B0D1F8931CA00730160 /* RetroTerm.app */;
 			productType = "com.apple.product-type.application";
-		};
-		68E550EC1FF92642008C7AF6 /* 64TermTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68E550F41FF92642008C7AF6 /* Build configuration list for PBXNativeTarget "64TermTests" */;
-			buildPhases = (
-				68E550E91FF92642008C7AF6 /* Sources */,
-				68E550EA1FF92642008C7AF6 /* Frameworks */,
-				68E550EB1FF92642008C7AF6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68E550F31FF92642008C7AF6 /* PBXTargetDependency */,
-			);
-			name = 64TermTests;
-			productName = 64TermTests;
-			productReference = 68E550ED1FF92642008C7AF6 /* 64TermTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -434,23 +387,18 @@
 		68025B051F8931CA00730160 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = SFT;
-				LastUpgradeCheck = 0900;
+				CLASSPREFIX = RTT;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Alessandro Gatti";
 				TargetAttributes = {
 					68025B0C1F8931CA00730160 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
-					68E550EC1FF92642008C7AF6 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 68025B0C1F8931CA00730160;
-					};
 				};
 			};
-			buildConfigurationList = 68025B081F8931CA00730160 /* Build configuration list for PBXProject "64Term" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = 68025B081F8931CA00730160 /* Build configuration list for PBXProject "RetroTerm" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -462,8 +410,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				68025B0C1F8931CA00730160 /* 64Term */,
-				68E550EC1FF92642008C7AF6 /* 64TermTests */,
+				68025B0C1F8931CA00730160 /* RetroTerm */,
 			);
 		};
 /* End PBXProject section */
@@ -485,13 +432,6 @@
 				68378BF71FA0587A0070E0E6 /* charset_upper.png in Resources */,
 				685C1C521F9BB14E00037C46 /* DebugInspector.xib in Resources */,
 				687806BE1F9E992300B94757 /* QuickConnect.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68E550EB1FF92642008C7AF6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +458,7 @@
 				6845D3C71F98614000CB8FD1 /* MTKView+Screenshot.m in Sources */,
 				682362231F97B757003E3ECA /* NSMutableData+Dequeue.m in Sources */,
 				688217DF1F9327060085E8FE /* SFTTerminalEmulatorContext.m in Sources */,
-				680368B41F95284D00889CE9 /* 64Term.xcdatamodeld in Sources */,
+				680368B41F95284D00889CE9 /* RetroTerm.xcdatamodeld in Sources */,
 				6845D3D21F9894F900CB8FD1 /* SFTReplaySpeedSelectorViewController.m in Sources */,
 				683365F21F97D38500FB1AF4 /* SFTDataToImageTransformer.m in Sources */,
 				685C1C5B1F9DE80900037C46 /* SFTHexDumpViewController.m in Sources */,
@@ -539,22 +479,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68E550E91FF92642008C7AF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		68E550F31FF92642008C7AF6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68025B0C1F8931CA00730160 /* 64Term */;
-			targetProxy = 68E550F21FF92642008C7AF6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		68025B1C1F8931CA00730160 /* Debug */ = {
@@ -571,6 +496,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -578,6 +504,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -626,6 +553,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -633,6 +561,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -694,11 +623,14 @@
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
 				GCC_WARN_UNUSED_LABEL = NO;
 				GCC_WARN_UNUSED_PARAMETER = NO;
-				INFOPLIST_FILE = 64Term/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_FILE = RetroTerm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MTL_TREAT_WARNINGS_AS_ERRORS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = it.frob.sixtyfourterm;
-				PRODUCT_NAME = 64Term;
+				PRODUCT_NAME = RetroTerm;
 			};
 			name = Debug;
 		};
@@ -736,51 +668,21 @@
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
 				GCC_WARN_UNUSED_LABEL = NO;
 				GCC_WARN_UNUSED_PARAMETER = NO;
-				INFOPLIST_FILE = 64Term/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_FILE = RetroTerm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MTL_TREAT_WARNINGS_AS_ERRORS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = it.frob.sixtyfourterm;
-				PRODUCT_NAME = 64Term;
-			};
-			name = Release;
-		};
-		68E550F51FF92642008C7AF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"TEST=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = 64TermTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.frob.sixtyfourterm.tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/64Term.app/Contents/MacOS/64Term";
-			};
-			name = Debug;
-		};
-		68E550F61FF92642008C7AF6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = 64TermTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.frob.sixtyfourterm.tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/64Term.app/Contents/MacOS/64Term";
+				PRODUCT_NAME = RetroTerm;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		68025B081F8931CA00730160 /* Build configuration list for PBXProject "64Term" */ = {
+		68025B081F8931CA00730160 /* Build configuration list for PBXProject "RetroTerm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68025B1C1F8931CA00730160 /* Debug */,
@@ -789,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68025B1E1F8931CA00730160 /* Build configuration list for PBXNativeTarget "64Term" */ = {
+		68025B1E1F8931CA00730160 /* Build configuration list for PBXNativeTarget "RetroTerm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68025B1F1F8931CA00730160 /* Debug */,
@@ -798,25 +700,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68E550F41FF92642008C7AF6 /* Build configuration list for PBXNativeTarget "64TermTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68E550F51FF92642008C7AF6 /* Debug */,
-				68E550F61FF92642008C7AF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		680368B01F95284D00889CE9 /* 64Term.xcdatamodeld */ = {
+		680368B01F95284D00889CE9 /* RetroTerm.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				680368B11F95284D00889CE9 /* v1.xcdatamodel */,
 			);
 			currentVersion = 680368B11F95284D00889CE9 /* v1.xcdatamodel */;
-			path = 64Term.xcdatamodeld;
+			path = RetroTerm.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
