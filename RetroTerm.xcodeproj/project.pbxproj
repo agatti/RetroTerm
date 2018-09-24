@@ -44,8 +44,6 @@
 		685C1C511F9BB14E00037C46 /* SFTDebugInspectorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 685C1C4F1F9BB14E00037C46 /* SFTDebugInspectorWindowController.m */; };
 		685C1C521F9BB14E00037C46 /* DebugInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 685C1C501F9BB14E00037C46 /* DebugInspector.xib */; };
 		685C1C551F9D22E200037C46 /* NSWindowController+Toggle.m in Sources */ = {isa = PBXBuildFile; fileRef = 685C1C541F9D22E200037C46 /* NSWindowController+Toggle.m */; };
-		685C1C5B1F9DE80900037C46 /* SFTHexDumpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 685C1C591F9DE80900037C46 /* SFTHexDumpViewController.m */; };
-		685C1C5C1F9DE80900037C46 /* HexDumpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 685C1C5A1F9DE80900037C46 /* HexDumpView.xib */; };
 		687806B61F9E211B00B94757 /* SFTPlaybackIOProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 687806B51F9E211B00B94757 /* SFTPlaybackIOProcessor.m */; };
 		687806B91F9E6EF400B94757 /* SFTPETSCIIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 687806B81F9E6EF400B94757 /* SFTPETSCIIConverter.m */; };
 		687806BD1F9E992300B94757 /* SFTQuickConnectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 687806BB1F9E992300B94757 /* SFTQuickConnectWindowController.m */; };
@@ -123,9 +121,6 @@
 		685C1C501F9BB14E00037C46 /* DebugInspector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebugInspector.xib; sourceTree = "<group>"; };
 		685C1C531F9D22E200037C46 /* NSWindowController+Toggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindowController+Toggle.h"; sourceTree = "<group>"; };
 		685C1C541F9D22E200037C46 /* NSWindowController+Toggle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSWindowController+Toggle.m"; sourceTree = "<group>"; };
-		685C1C581F9DE80900037C46 /* SFTHexDumpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTHexDumpViewController.h; sourceTree = "<group>"; };
-		685C1C591F9DE80900037C46 /* SFTHexDumpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTHexDumpViewController.m; sourceTree = "<group>"; };
-		685C1C5A1F9DE80900037C46 /* HexDumpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HexDumpView.xib; sourceTree = "<group>"; };
 		687806B41F9E211B00B94757 /* SFTPlaybackIOProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTPlaybackIOProcessor.h; sourceTree = "<group>"; };
 		687806B51F9E211B00B94757 /* SFTPlaybackIOProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTPlaybackIOProcessor.m; sourceTree = "<group>"; };
 		687806B71F9E6EF400B94757 /* SFTPETSCIIConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTPETSCIIConverter.h; sourceTree = "<group>"; };
@@ -290,8 +285,6 @@
 			children = (
 				6845D3D01F9894F900CB8FD1 /* SFTReplaySpeedSelectorViewController.h */,
 				6845D3D11F9894F900CB8FD1 /* SFTReplaySpeedSelectorViewController.m */,
-				685C1C581F9DE80900037C46 /* SFTHexDumpViewController.h */,
-				685C1C591F9DE80900037C46 /* SFTHexDumpViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -339,7 +332,6 @@
 				6816B5971F951704008E6952 /* Connection.xib */,
 				680DB7931F9DE8FF007DB4DD /* DataFlowInspector.xib */,
 				685C1C501F9BB14E00037C46 /* DebugInspector.xib */,
-				685C1C5A1F9DE80900037C46 /* HexDumpView.xib */,
 				6816B59B1F951726008E6952 /* MainMenu.xib */,
 				687806BC1F9E992300B94757 /* QuickConnect.xib */,
 				6845D3CE1F9894C200CB8FD1 /* ReplaySpeedSelector.xib */,
@@ -427,7 +419,6 @@
 				680DB7951F9DE8FF007DB4DD /* DataFlowInspector.xib in Resources */,
 				6816B59C1F951726008E6952 /* MainMenu.xib in Resources */,
 				6845D3CF1F9894C200CB8FD1 /* ReplaySpeedSelector.xib in Resources */,
-				685C1C5C1F9DE80900037C46 /* HexDumpView.xib in Resources */,
 				68378BF61FA0587A0070E0E6 /* charset_lower.png in Resources */,
 				68378BF71FA0587A0070E0E6 /* charset_upper.png in Resources */,
 				685C1C521F9BB14E00037C46 /* DebugInspector.xib in Resources */,
@@ -461,7 +452,6 @@
 				680368B41F95284D00889CE9 /* RetroTerm.xcdatamodeld in Sources */,
 				6845D3D21F9894F900CB8FD1 /* SFTReplaySpeedSelectorViewController.m in Sources */,
 				683365F21F97D38500FB1AF4 /* SFTDataToImageTransformer.m in Sources */,
-				685C1C5B1F9DE80900037C46 /* SFTHexDumpViewController.m in Sources */,
 				68025B1A1F8931CA00730160 /* main.m in Sources */,
 				68025B121F8931CA00730160 /* SFTApplicationDelegate.m in Sources */,
 				682362201F97B27F003E3ECA /* NSMutableData+Append.m in Sources */,
